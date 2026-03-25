@@ -3,9 +3,8 @@
 return {
   'm4xshen/autoclose.nvim',
   config = function()
-    require("autoclose").setup({
-      local config = {
-        local keys = {
+    require('autoclose').setup {
+      keys = {
         ['('] = { escape = false, close = true, pair = '()' },
         ['['] = { escape = false, close = true, pair = '[]' },
         ['{'] = { escape = false, close = true, pair = '{}' },
@@ -19,15 +18,14 @@ return {
         ["'"] = { escape = true, close = true, pair = "''" },
         ['`'] = { escape = true, close = true, pair = '``' },
       },
-        local options = {
+      options = {
         disabled_filetypes = { 'text' },
         disable_when_touch = false,
         touch_regex = '[%w(%[{]',
         pair_spaces = true,
         auto_indent = true,
         disable_command_mode = false,
-        }
-      }
-    })
+      },
+    }
   end,
 }
